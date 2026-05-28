@@ -19,9 +19,9 @@ const CONFIG = {
       type: "link",
     },
     {
-      label: "Eden AI",
-      url: "https://www.edenai.com.br/home-student",
-      icon: "🤖",
+      label: "Site de Projetos",
+      url: "https://sites.google.com/cesar.school/projeto1ccdsg261/home?authuser=0",
+      icon: "📝",
       type: "link",
     },
     {
@@ -67,7 +67,7 @@ const CONFIG = {
     {
       dia: "Segunda-feira",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala A DEFINIR · Tiradentes" },
+        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala Lab DELL · Tiradentes" },
         { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala Garagem 01 · Tiradentes" },
       ],
     },
@@ -82,7 +82,7 @@ const CONFIG = {
     {
       dia: "Quarta-feira",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala A DEFINIR · Tiradentes" },
+        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala Lab DELL · Tiradentes" },
         { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala Garagem 01 · Tiradentes" },
         { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
       ],
@@ -109,12 +109,12 @@ const CONFIG = {
   // ── Provas ───────────────────────────────────────────────
   // Datas extraídas da grade semanal (semana de 13–17/mar/2026)
   provas: [
-    { data: "2026-04-13", disciplina: "Sistemas Digitais", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
-    { data: "2026-04-16", disciplina: "Introdução à Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
-    { data: "2026-04-14", disciplina: "Fundamentos de Programação", tipo: "Módulo 1 · 1ª Unidade", horario: "10:30", sala: "Sala 05 · Apolo" },
-    { data: "2026-04-15", disciplina: "Matemática para Computação", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Sala 05 · Apolo" },
-    { data: "2026-04-17", disciplina: "FP1: Gestão de Pessoas", tipo: "AV1 · 1ª Unidade", horario: "08:15", sala: "Presencial" },
-    { data: "2026-04-24", disciplina: "Projeto 01", tipo: "Status Report 1", horario: "A confirmar", sala: "Presencial" },
+    { data: "2026-06-03", disciplina: "Sistemas Digitais", tipo: "AV2 · 2ª Unidade", horario: "08:15", sala: "A confirmar" },
+    { data: "2026-06-11", disciplina: "Introdução à Computação", tipo: "AV2 · 2ª Unidade", horario: "08:15", sala: "A confirmar" },
+    { data: "2026-06-16", disciplina: "Fundamentos de Programação", tipo: "Módulo 2 · 2ª Unidade", horario: "10:30", sala: "A confirmar" },
+    { data: "2026-06-17", disciplina: "Matemática para Computação", tipo: "AV2 · 2ª Unidade", horario: "08:15", sala: "A confirmar" },
+    { data: "2026-06-12", disciplina: "FP1: Gestão de Pessoas", tipo: "AV2 · 2ª Unidade", horario: "08:15", sala: "Presencial" },
+    { data: "2026-06-19", disciplina: "Projeto 01", tipo: "Status Report 2", horario: "A confirmar", sala: "Presencial" },
   ],
 
   // ── Monitorias ───────────────────────────────────────────
