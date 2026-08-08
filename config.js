@@ -38,13 +38,13 @@ const CONFIG = {
     },
     {
       label: "Manual do Estudante",
-      url: "assets/pdfs/Manual-do-Estudante-2026.1-CESAR-School.pdf",
+      url: "assets/pdfs/Manual-do-Estudante-2026.2-CESAR-School.pdf",
       icon: "📖",
       type: "pdf",
     },
     {
       label: "Calendário Acadêmico",
-      url: "assets/pdfs/Calendário Acadêmico 2026.1 Design e CC 231225_v2 (1).pdf",
+      url: "assets/pdfs/Calendário Acadêmico 2026.2 ADM, Design e CC 080626_v2 (2).pdf",
       icon: "📅",
       type: "pdf",
     }
@@ -52,12 +52,12 @@ const CONFIG = {
 
   // ── Disciplinas (com link do Classroom) ──────────────────
   disciplinas: [
-    { nome: "Matemática para Computação",  classroom: "https://classroom.google.com/u/2/c/ODQ1OTAxNDE1NjA5" },
-    { nome: "Sistemas Digitais",           classroom: "https://classroom.google.com/u/2/c/ODQzNDg3NDQ1MDky" },
-    { nome: "Introdução à Computação",     classroom: "https://classroom.google.com/u/2/c/ODQ0MDc3NzE3MTg5" },
-    { nome: "Fundamentos de Programação",  classroom: "https://classroom.google.com/u/2/c/ODQzNzczMDYyODc5" },
-    { nome: "FP1: Gestão de Pessoas",      classroom: "https://classroom.google.com/u/2/c/ODQzNzcwODAxODMz" },
-    { nome: "Projeto 01",                  classroom: "https://classroom.google.com/u/2/c/ODQzODcyOTE2OTAw" },
+    { nome: "Fundamentos de Desenvolvimento de Software (FDS)",  classroom: "https://classroom.google.com/u/2/c/ODcxMTU0ODU2MzE2" },
+    { nome: "Lógica Matemática para Computação (LMC)",           classroom: "https://classroom.google.com/u/2/c/ODcxNTE0Njg2MTY1" },
+    { nome: "Interface Humano-Computador (IHC)",     classroom: "https://classroom.google.com/u/2/c/ODcxMjA4NDIxNzI0" },
+    { nome: "Programação Imperativa e Funcional (PIF)",  classroom: "https://classroom.google.com/u/2/w/ODcxMjI0MzU4NjY5/t/all" },
+    { nome: "FP2: Fundamentos de Projetos",      classroom: "https://classroom.google.com/u/2/c/ODcxNTUxMjQ1MDgw" },
+    { nome: "Projeto 02",                  classroom: "https://classroom.google.com/u/2/c/Nzk4NDkwODU0Mzc1" },
   ],
 
 
@@ -67,32 +67,32 @@ const CONFIG = {
     {
       dia: "Segunda-feira",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala Lab DELL · Tiradentes" },
-        { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala Garagem 01 · Tiradentes" },
+        { horario: "08:15 – 10:15", disciplina: "Fundamentos de Desenvolvimento de Software (FDS)", sala: "Sala 301 · Brum" },
+        { horario: "10:30 – 12:30", disciplina: "Lógica Matemática para Computação (LMC)", sala: "Sala 301 · Brum" },
       ],
     },
     {
       dia: "Terça-feira",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Introdução à Computação", sala: "Sala 05 · Apolo" },
-        { horario: "10:30 – 12:30", disciplina: "Fundamentos de Programação", sala: "Sala 05 · Apolo" },
-        { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
+        { horario: "08:15 – 10:15", disciplina: "Interface Humano-Computador (IHC)", sala: "Sala 301 · Brum" },
+        { horario: "10:30 – 12:30", disciplina: "Programação Imperativa e Funcional (PIF)", sala: "Sala 301 · Brum" },
+        { horario: "13:30 – 14:30", disciplina: "Projeto 02 ⚠️ ver grupo", sala: "A sala varia com o grupo · Brum", aviso: true },
       ],
     },
     {
       dia: "Quarta-feira",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Matemática para Computação", sala: "Sala Lab DELL · Tiradentes" },
-        { horario: "10:30 – 12:30", disciplina: "Sistemas Digitais", sala: "Sala Garagem 01 · Tiradentes" },
-        { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
+        { horario: "08:15 – 10:15", disciplina: "Fundamentos de Desenvolvimento de Software (FDS)", sala: "Sala 301 · Brum" },
+        { horario: "10:30 – 12:30", disciplina: "Lógica Matemática para Computação (LMC)", sala: "Sala 301 · Brum" },
+        { horario: "13:30 – 14:30", disciplina: "Projeto 02 ⚠️ ver grupo", sala: "A sala varia com o grupo · Brum", aviso: true },
       ],
     },
     {
       dia: "Quinta-feira",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "Introdução à Computação", sala: "Sala 05 · Apolo" },
-        { horario: "10:30 – 12:30", disciplina: "Fundamentos de Programação", sala: "Sala 05 · Apolo" },
-        { horario: "13:30 – 14:30", disciplina: "Projeto 01 ⚠️ ver grupo", sala: "A sala varia com o grupo · Apolo", aviso: true },
+        { horario: "08:15 – 10:15", disciplina: "Interface Humano-Computador (IHC)", sala: "Sala 301 · Brum" },
+        { horario: "10:30 – 12:30", disciplina: "Programação Imperativa e Funcional (PIF)", sala: "Sala 301 · Brum" },
+        { horario: "13:30 – 14:30", disciplina: "Projeto 02 ⚠️ ver grupo", sala: "A sala varia com o grupo · Brum", aviso: true },
       ],
     },
     {
@@ -100,33 +100,35 @@ const CONFIG = {
       emoji: "🛋️",
       zoomLink: "https://cesar.zoom.us/j/82551008097",
       aulas: [
-        { horario: "08:15 – 10:15", disciplina: "FP1: Gestão de Pessoas", sala: "Online 😴", online: true },
-        { horario: "10:30 – 11:30", disciplina: "FP1: Gestão de Pessoas", sala: "Online 😴", online: true },
+        { horario: "08:15 – 10:15", disciplina: "FP2: Fundamentos de Projetos", sala: "Online 😴", online: true },
+        { horario: "10:30 – 11:30", disciplina: "FP2: Fundamentos de Projetos", sala: "Online 😴", online: true },
       ],
     },
   ],
 
   // ── Provas ───────────────────────────────────────────────
-  // Datas extraídas da grade semanal (semana de 13–17/mar/2026)
   provas: [
-    { data: "2026-06-03", disciplina: "Sistemas Digitais", tipo: "AV2 · 2ª Unidade", horario: "08:15", sala: "A confirmar" },
-    { data: "2026-06-11", disciplina: "Introdução à Computação", tipo: "AV2 · 2ª Unidade", horario: "08:15", sala: "A confirmar" },
-    { data: "2026-06-16", disciplina: "Fundamentos de Programação", tipo: "Módulo 2 · 2ª Unidade", horario: "10:30", sala: "A confirmar" },
-    { data: "2026-06-17", disciplina: "Matemática para Computação", tipo: "AV2 · 2ª Unidade", horario: "08:15", sala: "A confirmar" },
-    { data: "2026-06-12", disciplina: "FP1: Gestão de Pessoas", tipo: "AV2 · 2ª Unidade", horario: "08:15", sala: "Presencial" },
-    { data: "2026-06-19", disciplina: "Projeto 01", tipo: "Status Report 2", horario: "A confirmar", sala: "Presencial" },
+    { data: "2026-08-20", disciplina: "Programação Imperativa e Funcional (PIF)", tipo: "Mini-Prova 01 · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
+    { data: "2026-09-10", disciplina: "Programação Imperativa e Funcional (PIF)", tipo: "Mini-Prova 02 · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
+    { data: "2026-09-24", disciplina: "Projeto 02", tipo: "Status Report 1", horario: "A confirmar", sala: "A confirmar" },
+    { data: "2026-09-29", disciplina: "Programação Imperativa e Funcional (PIF)", tipo: "Mini-Prova 03 · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
+    { data: "2026-09-30", disciplina: "Fundamentos de Desenvolvimento de Software (FDS)", tipo: "AV1 · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
+    { data: "2026-10-01", disciplina: "Programação Imperativa e Funcional (PIF)", tipo: "Apresentação do projeto · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
+    { data: "2026-10-01", disciplina: "Interface Humano-Computador (IHC)", tipo: "AV1 (Apresentação) · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
+    { data: "2026-10-05", disciplina: "Lógica Matemática para Computação (LMC)", tipo: "AV1 · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
+    { data: "2026-10-06", disciplina: "Interface Humano-Computador (IHC)", tipo: "AV1 (Prova) · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
+    { data: "2026-10-09", disciplina: "FP2: Fundamentos de Projetos", tipo: "AV1 · 1ª Unidade", horario: "A confirmar", sala: "Sala 301 · Brum" },
   ],
 
   // ── Monitorias ───────────────────────────────────────────
   // Para múltiplos horários da mesma disciplina, use entradas separadas
   monitorias: [
-    { disciplina: "Matemática para Computação", dia: "Segunda-feira", horario: "14:30", sala: "Sala 05 · Apolo", link: "" },
-    { disciplina: "Matemática para Computação", dia: "Sexta-feira", horario: "18:30", sala: "Online - Zoom", link: "" },
-    { disciplina: "Sistemas Digitais", dia: "Segunda-feira", horario: "14:00", sala: "Online — Zoom", link: "" },
-    { disciplina: "Projeto 01", dia: "—", horario: "A definir", sala: "—", link: "" },
-    { disciplina: "Introdução à Computação", dia: "—", horario: "A definir", sala: "—", link: "" },
-    { disciplina: "Fundamentos de Programação", dia: "Segunda-feira", horario: "13:30", sala: "Sala 04/05 · Apolo", link: "" },
-    { disciplina: "Fundamentos de Programação", dia: "Terça-feira", horario: "14:30", sala: "Sala 04/05 · Apolo", link: "" },
+    { disciplina: "Fundamentos de Desenvolvimento de Software (FDS)", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
+    { disciplina: "Lógica Matemática para Computação (LMC)", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
+    { disciplina: "Interface Humano-Computador (IHC)", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
+    { disciplina: "Programação Imperativa Funcional (PIF)", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
+    { disciplina: "FP2: Fundamentos de Projetos", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
+    { disciplina: "Projeto 02", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
   ],
 
 };

@@ -40,7 +40,7 @@ function init() {
   ────────────────────────────────────────────────────────── */
   document.getElementById("h-turma").textContent = CONFIG.turma;
   document.getElementById("header-sem").textContent =
-    "Semestre " + CONFIG.semestre + " · CESAR School";
+    "Turma do semestre " + CONFIG.semestre + " - 2° Período";
 
   /* ── Link do WhatsApp ────────────────────────────────────
      O botão de WhatsApp na share bar tem id="wa-btn".
@@ -196,65 +196,81 @@ function init() {
   const monthNames = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
 
   // Cria uma cópia do array (spread ...) e ordena por data
-  // sort() com função comparadora: retorna negativo, zero ou positivo
-  // new Date(a.data) - new Date(b.data) coloca as mais antigas primeiro
   const sorted = [...CONFIG.provas].sort((a, b) =>
     new Date(a.data) - new Date(b.data)
   );
 
-  // Agrupa provas por disciplina num objeto chave:valor
-  // Ex: { "Matemática": [prova1, prova2], "Sistemas Digitais": [prova3] }
-  const provasByDisc = {};
-  sorted.forEach(p => {
-    if (!provasByDisc[p.disciplina]) provasByDisc[p.disciplina] = [];
-    provasByDisc[p.disciplina].push(p);
+  // ── Função auxiliar: cria um card de prova ────────────────
+  // Extraída pra ser reutilizada nas duas visualizações
+  function criaCardProva(p) {
+    const d = new Date(p.data + "T12:00:00");
+    const upcoming = d >= now;
+    const card = document.createElement("div");
+    card.className = "prova-card" + (upcoming ? " upcoming" : "");
+    card.innerHTML = `
+      <div class="prova-date">
+        <div class="day">${d.getDate().toString().padStart(2,"0")}</div>
+        <div class="month">${monthNames[d.getMonth()]}</div>
+      </div>
+      <div class="prova-info">
+        <div class="disc">${p.disciplina}</div>
+        <div class="detail">${p.horario} · ${p.sala}</div>
+      </div>
+      <div class="prova-tipo">${p.tipo}</div>
+    `;
+    return card;
+  }
+
+  // ── Renderiza visualização por matéria ────────────────────
+  function renderPorMateria() {
+    provasList.innerHTML = "";
+    const provasByDisc = {};
+    sorted.forEach(p => {
+      if (!provasByDisc[p.disciplina]) provasByDisc[p.disciplina] = [];
+      provasByDisc[p.disciplina].push(p);
+    });
+    Object.entries(provasByDisc).forEach(([disc, provas]) => {
+      const group = document.createElement("div");
+      group.className = "materia-group";
+      const header = document.createElement("div");
+      header.className = "materia-header";
+      const cl = classroomUrl(disc);
+      header.innerHTML = `
+        <span>${disc}</span>
+        ${cl ? `<a href="${cl}" target="_blank" rel="noopener" class="disc-classroom">${classroomIcon} Classroom</a>` : ""}
+      `;
+      group.appendChild(header);
+      provas.forEach(p => group.appendChild(criaCardProva(p)));
+      provasList.appendChild(group);
+    });
+  }
+
+  // ── Renderiza visualização por data ───────────────────────
+  function renderPorData() {
+    provasList.innerHTML = "";
+    sorted.forEach(p => provasList.appendChild(criaCardProva(p)));
+  }
+
+  // ── Estado inicial: por matéria ───────────────────────────
+  let viewMode = "materia";
+  renderPorMateria();
+
+  // ── Conecta os botões do toggle ───────────────────────────
+  // Os botões estão no index.html com ids "btn-por-materia" e "btn-por-data"
+  document.getElementById("btn-por-materia").addEventListener("click", () => {
+    if (viewMode === "materia") return;
+    viewMode = "materia";
+    renderPorMateria();
+    document.getElementById("btn-por-materia").classList.add("active");
+    document.getElementById("btn-por-data").classList.remove("active");
   });
 
-  // Object.entries() converte o objeto em array de pares [chave, valor]
-  // Desestruturação [disc, provas] extrai chave e valor de cada par
-  Object.entries(provasByDisc).forEach(([disc, provas]) => {
-    // Container do grupo de disciplina
-    const group = document.createElement("div");
-    group.className = "materia-group";
-
-    // Cabeçalho com nome da disciplina + botão do Classroom (se tiver link)
-    const header = document.createElement("div");
-    header.className = "materia-header";
-    const cl = classroomUrl(disc);
-    header.innerHTML = `
-      <span>${disc}</span>
-      ${cl ? `<a href="${cl}" target="_blank" rel="noopener" class="disc-classroom">
-                ${classroomIcon} Classroom
-              </a>` : ""}
-    `;
-    group.appendChild(header);
-
-    // Card de cada prova da disciplina
-    provas.forEach(p => {
-      // "T12:00:00" adiciona horário do meio-dia para evitar problemas
-      // de fuso horário que poderiam mudar a data
-      const d = new Date(p.data + "T12:00:00");
-      const upcoming = d >= now; // é uma prova futura?
-
-      const card = document.createElement("div");
-      card.className = "prova-card" + (upcoming ? " upcoming" : "");
-
-      // padStart(2,"0") garante dois dígitos: "5" vira "05"
-      card.innerHTML = `
-        <div class="prova-date">
-          <div class="day">${d.getDate().toString().padStart(2,"0")}</div>
-          <div class="month">${monthNames[d.getMonth()]}</div>
-        </div>
-        <div class="prova-info">
-          <div class="disc">${p.disciplina}</div>
-          <div class="detail">${p.horario} · ${p.sala}</div>
-        </div>
-        <div class="prova-tipo">${p.tipo}</div>
-      `;
-      group.appendChild(card);
-    });
-
-    provasList.appendChild(group);
+  document.getElementById("btn-por-data").addEventListener("click", () => {
+    if (viewMode === "data") return;
+    viewMode = "data";
+    renderPorData();
+    document.getElementById("btn-por-data").classList.add("active");
+    document.getElementById("btn-por-materia").classList.remove("active");
   });
 
 
@@ -295,7 +311,7 @@ function init() {
       // 3. Se é "a definir" → badge acinzentado
       // 4. Caso padrão → badge "Presencial"
       const isOnline   = m.sala.toLowerCase().includes("online");
-      const isADefinir = m.horario === "A definir" || m.dia === "—";
+      const isADefinir = m.horario === "A definir" || m.horario === "A confirmar" || m.dia === "—";
 
       const linkHtml = m.link
         ? `<a href="${m.link}" target="_blank" rel="noopener" class="monitoria-link">Entrar</a>`

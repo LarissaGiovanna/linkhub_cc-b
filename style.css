@@ -507,7 +507,60 @@ section:nth-child(4) { animation-delay: .36s; } /* Monitorias */
   display: inline-block; /* necessário para o border-bottom não ocupar a linha toda */
 }
 [data-theme="dark"] .section-label {
-  border-bottom-color: rgba(255,255,255,0.15); /* linha mais sutil no escuro */
+  border-bottom-color: rgba(255,255,255,0.15);
+}
+
+/* Cabeçalho de seção com título + toggle lado a lado */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.section-header .section-label {
+  margin-bottom: 0; /* remove a margem — o section-header assume */
+}
+
+/* Botões de alternância de visualização (Por matéria / Por data) */
+.view-toggle {
+  display: flex;
+  gap: .3rem;
+  background: rgba(227,90,0,0.08);
+  border: 1px solid rgba(227,90,0,0.18);
+  border-radius: 100px;
+  padding: .25rem;
+  flex-shrink: 0;
+}
+[data-theme="dark"] .view-toggle {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.toggle-btn {
+  font-family: var(--font-body);
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .3rem .75rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-dim);
+  transition: background .2s, color .2s;
+}
+.toggle-btn.active {
+  background: #e35a00;
+  color: #fff;
+}
+.toggle-btn:hover:not(.active) {
+  background: rgba(227,90,0,0.12);
+  color: var(--text);
+}
+[data-theme="dark"] .toggle-btn.active {
+  background: rgba(255,255,255,0.15);
+  color: var(--text);
 }
 
 

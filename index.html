@@ -195,10 +195,16 @@
 
       <!-- ── Seção: Calendário de Provas ───────────────────
            Preenchido pelo JS a partir de CONFIG.provas.
-           Agrupado por disciplina automaticamente.
+           Os botões de toggle alternam entre visualização por matéria e por data.
       ──────────────────────────────────────────────────────── -->
       <section>
-        <p class="section-label">Calendário de Provas</p>
+        <div class="section-header">
+          <p class="section-label">Calendário de Provas</p>
+          <div class="view-toggle">
+            <button id="btn-por-materia" class="toggle-btn active">Por matéria</button>
+            <button id="btn-por-data" class="toggle-btn">Por data</button>
+          </div>
+        </div>
         <div class="provas-list" id="provas-list"></div>
       </section>
 
