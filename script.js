@@ -40,7 +40,7 @@ function init() {
   ────────────────────────────────────────────────────────── */
   document.getElementById("h-turma").textContent = CONFIG.turma;
   document.getElementById("header-sem").textContent =
-    "Turma do semestre " + CONFIG.semestre + " - 2° Período";
+    "Turma do semestre " + CONFIG.semestre + " - 3° Período";
 
   /* ── Link do WhatsApp ────────────────────────────────────
      O botão de WhatsApp na share bar tem id="wa-btn".
