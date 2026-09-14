@@ -117,7 +117,7 @@ const CONFIG = {
   // ── Monitorias ───────────────────────────────────────────
   // Para múltiplos horários da mesma disciplina, use entradas separadas
   monitorias: [
-    { disciplina: "Infraestrutura de Software (SO)", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
+    { disciplina: "Infraestrutura de Software (SO)", dia: "Segundas-feiras", horario: "20:00", sala: "Online", link: "" },
     { disciplina: "Algoritmos e Estrutura de Dados (AED)", dia: "Segundas e Terças", horario: "19:00", sala: "Online", link: "" },
     { disciplina: "Programação Orientada a Objetos (POO)", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
     { disciplina: "Infraestrutura de Hardware", dia: "—", horario: "A confirmar", sala: "A confirmar", link: "" },
