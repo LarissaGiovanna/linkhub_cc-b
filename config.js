@@ -110,7 +110,7 @@ const CONFIG = {
     { data: "2026-12-01", disciplina: "Programação Orientada a Objetos (POO)", tipo: "Avaliação 02 · 2ª Unidade", horario: "08:15 - 10:15", sala: "Sala 207 · Brum" },
     { data: "2026-10-01", disciplina: "Infraestrutura de Hardware", tipo: "Avaliação 01 · 1ª Unidade", horario: "10:30 - 12:30", sala: "Sala 207 · Brum" },
     { data: "2026-12-03", disciplina: "Infraestrutura de Hardware", tipo: "Avaliação 02 · 2ª Unidade", horario: "10:30 - 12:30", sala: "Sala 207 · Brum" },
-    { data: "2026-09-25", disciplina: "Projeto 03", tipo: "Status Report 1", horario: "8:30", sala: "Online" },
+    { data: "2026-09-24", disciplina: "Projeto 03", tipo: "Status Report 1", horario: "8:30", sala: "Online" },
     { data: "2026-11-12", disciplina: "Projeto 03", tipo: "Status Report 2", horario: "A confirmar", sala: "A confirmar" },
     { data: "2026-10-02", disciplina: "Metodologia Científica", tipo: "Apresentação dos artigos", horario: "08:15 - 11:30", sala: "Online" },
   ],
