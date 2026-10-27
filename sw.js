@@ -35,7 +35,7 @@
    do site, mude o número da versão (ex: "linkhub-v2") para que
    o SW baixe os arquivos atualizados e descarte o cache antigo.
 ────────────────────────────────────────────────────────────── */
-const CACHE = "linkhub-v1";
+const CACHE = "linkhub-v2";
 
 /* ── Lista de arquivos para cache ────────────────────────────
    Estes são os arquivos que serão salvos localmente na instalação.
@@ -51,7 +51,7 @@ const ASSETS = [
   "./script.js",
   "./assets/images/school_laranja.png",
   "./assets/images/logo-cesar-school-branca.png",
-  "./assets/pdfs/Manual-do-Estudante-2026.1-CESAR-School.pdf",
+  "./assets/pdfs/Manual-do-Estudante-2026.2-CESAR-School.pdf",
 ];
 
 
